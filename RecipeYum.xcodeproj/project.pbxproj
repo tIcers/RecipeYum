@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90C946A62ACB452400B9A984 /* RecipeYumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946A52ACB452400B9A984 /* RecipeYumApp.swift */; };
+		90C946A82ACB452400B9A984 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946A72ACB452400B9A984 /* ContentView.swift */; };
+		90C946AA2ACB452700B9A984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C946A92ACB452700B9A984 /* Assets.xcassets */; };
+		90C946AD2ACB452700B9A984 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C946AC2ACB452700B9A984 /* Preview Assets.xcassets */; };
+		90C946B72ACB452800B9A984 /* RecipeYumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946B62ACB452800B9A984 /* RecipeYumTests.swift */; };
+		90C946C12ACB452800B9A984 /* RecipeYumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946C02ACB452800B9A984 /* RecipeYumUITests.swift */; };
+		90C946C32ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946C22ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90C946B32ACB452800B9A984 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90C9469A2ACB452300B9A984 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90C946A12ACB452400B9A984;
+			remoteInfo = RecipeYum;
+		};
+		90C946BD2ACB452800B9A984 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90C9469A2ACB452300B9A984 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90C946A12ACB452400B9A984;
+			remoteInfo = RecipeYum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		90C946A22ACB452400B9A984 /* RecipeYum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeYum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C946A52ACB452400B9A984 /* RecipeYumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumApp.swift; sourceTree = "<group>"; };
+		90C946A72ACB452400B9A984 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		90C946A92ACB452700B9A984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90C946AC2ACB452700B9A984 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		90C946B22ACB452800B9A984 /* RecipeYumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeYumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C946B62ACB452800B9A984 /* RecipeYumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumTests.swift; sourceTree = "<group>"; };
+		90C946BC2ACB452800B9A984 /* RecipeYumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeYumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C946C02ACB452800B9A984 /* RecipeYumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumUITests.swift; sourceTree = "<group>"; };
+		90C946C22ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90C9469F2ACB452400B9A984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C946AF2ACB452800B9A984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C946B92ACB452800B9A984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90C946992ACB452300B9A984 = {
+			isa = PBXGroup;
+			children = (
+				90C946A42ACB452400B9A984 /* RecipeYum */,
+				90C946B52ACB452800B9A984 /* RecipeYumTests */,
+				90C946BF2ACB452800B9A984 /* RecipeYumUITests */,
+				90C946A32ACB452400B9A984 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90C946A32ACB452400B9A984 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90C946A22ACB452400B9A984 /* RecipeYum.app */,
+				90C946B22ACB452800B9A984 /* RecipeYumTests.xctest */,
+				90C946BC2ACB452800B9A984 /* RecipeYumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90C946A42ACB452400B9A984 /* RecipeYum */ = {
+			isa = PBXGroup;
+			children = (
+				90C946A52ACB452400B9A984 /* RecipeYumApp.swift */,
+				90C946A72ACB452400B9A984 /* ContentView.swift */,
+				90C946A92ACB452700B9A984 /* Assets.xcassets */,
+				90C946AB2ACB452700B9A984 /* Preview Content */,
+			);
+			path = RecipeYum;
+			sourceTree = "<group>";
+		};
+		90C946AB2ACB452700B9A984 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				90C946AC2ACB452700B9A984 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		90C946B52ACB452800B9A984 /* RecipeYumTests */ = {
+			isa = PBXGroup;
+			children = (
+				90C946B62ACB452800B9A984 /* RecipeYumTests.swift */,
+			);
+			path = RecipeYumTests;
+			sourceTree = "<group>";
+		};
+		90C946BF2ACB452800B9A984 /* RecipeYumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				90C946C02ACB452800B9A984 /* RecipeYumUITests.swift */,
+				90C946C22ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift */,
+			);
+			path = RecipeYumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90C946A12ACB452400B9A984 /* RecipeYum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90C946C62ACB452800B9A984 /* Build configuration list for PBXNativeTarget "RecipeYum" */;
+			buildPhases = (
+				90C9469E2ACB452400B9A984 /* Sources */,
+				90C9469F2ACB452400B9A984 /* Frameworks */,
+				90C946A02ACB452400B9A984 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecipeYum;
+			productName = RecipeYum;
+			productReference = 90C946A22ACB452400B9A984 /* RecipeYum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90C946B12ACB452800B9A984 /* RecipeYumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90C946C92ACB452800B9A984 /* Build configuration list for PBXNativeTarget "RecipeYumTests" */;
+			buildPhases = (
+				90C946AE2ACB452800B9A984 /* Sources */,
+				90C946AF2ACB452800B9A984 /* Frameworks */,
+				90C946B02ACB452800B9A984 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90C946B42ACB452800B9A984 /* PBXTargetDependency */,
+			);
+			name = RecipeYumTests;
+			productName = RecipeYumTests;
+			productReference = 90C946B22ACB452800B9A984 /* RecipeYumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90C946BB2ACB452800B9A984 /* RecipeYumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90C946CC2ACB452800B9A984 /* Build configuration list for PBXNativeTarget "RecipeYumUITests" */;
+			buildPhases = (
+				90C946B82ACB452800B9A984 /* Sources */,
+				90C946B92ACB452800B9A984 /* Frameworks */,
+				90C946BA2ACB452800B9A984 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90C946BE2ACB452800B9A984 /* PBXTargetDependency */,
+			);
+			name = RecipeYumUITests;
+			productName = RecipeYumUITests;
+			productReference = 90C946BC2ACB452800B9A984 /* RecipeYumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90C9469A2ACB452300B9A984 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					90C946A12ACB452400B9A984 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					90C946B12ACB452800B9A984 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 90C946A12ACB452400B9A984;
+					};
+					90C946BB2ACB452800B9A984 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 90C946A12ACB452400B9A984;
+					};
+				};
+			};
+			buildConfigurationList = 90C9469D2ACB452300B9A984 /* Build configuration list for PBXProject "RecipeYum" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90C946992ACB452300B9A984;
+			productRefGroup = 90C946A32ACB452400B9A984 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90C946A12ACB452400B9A984 /* RecipeYum */,
+				90C946B12ACB452800B9A984 /* RecipeYumTests */,
+				90C946BB2ACB452800B9A984 /* RecipeYumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90C946A02ACB452400B9A984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C946AD2ACB452700B9A984 /* Preview Assets.xcassets in Resources */,
+				90C946AA2ACB452700B9A984 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C946B02ACB452800B9A984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C946BA2ACB452800B9A984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90C9469E2ACB452400B9A984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C946A82ACB452400B9A984 /* ContentView.swift in Sources */,
+				90C946A62ACB452400B9A984 /* RecipeYumApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C946AE2ACB452800B9A984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C946B72ACB452800B9A984 /* RecipeYumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C946B82ACB452800B9A984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C946C32ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift in Sources */,
+				90C946C12ACB452800B9A984 /* RecipeYumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90C946B42ACB452800B9A984 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90C946A12ACB452400B9A984 /* RecipeYum */;
+			targetProxy = 90C946B32ACB452800B9A984 /* PBXContainerItemProxy */;
+		};
+		90C946BE2ACB452800B9A984 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90C946A12ACB452400B9A984 /* RecipeYum */;
+			targetProxy = 90C946BD2ACB452800B9A984 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		90C946C42ACB452800B9A984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90C946C52ACB452800B9A984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90C946C72ACB452800B9A984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecipeYum/Preview Content\"";
+				DEVELOPMENT_TEAM = MCXXUBUZW7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atuski.RecipeYum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90C946C82ACB452800B9A984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecipeYum/Preview Content\"";
+				DEVELOPMENT_TEAM = MCXXUBUZW7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atuski.RecipeYum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		90C946CA2ACB452800B9A984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MCXXUBUZW7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atuski.RecipeYumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipeYum.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecipeYum";
+			};
+			name = Debug;
+		};
+		90C946CB2ACB452800B9A984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MCXXUBUZW7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atuski.RecipeYumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipeYum.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecipeYum";
+			};
+			name = Release;
+		};
+		90C946CD2ACB452800B9A984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MCXXUBUZW7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atuski.RecipeYumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RecipeYum;
+			};
+			name = Debug;
+		};
+		90C946CE2ACB452800B9A984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MCXXUBUZW7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atuski.RecipeYumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RecipeYum;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90C9469D2ACB452300B9A984 /* Build configuration list for PBXProject "RecipeYum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90C946C42ACB452800B9A984 /* Debug */,
+				90C946C52ACB452800B9A984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90C946C62ACB452800B9A984 /* Build configuration list for PBXNativeTarget "RecipeYum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90C946C72ACB452800B9A984 /* Debug */,
+				90C946C82ACB452800B9A984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90C946C92ACB452800B9A984 /* Build configuration list for PBXNativeTarget "RecipeYumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90C946CA2ACB452800B9A984 /* Debug */,
+				90C946CB2ACB452800B9A984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90C946CC2ACB452800B9A984 /* Build configuration list for PBXNativeTarget "RecipeYumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90C946CD2ACB452800B9A984 /* Debug */,
+				90C946CE2ACB452800B9A984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90C9469A2ACB452300B9A984 /* Project object */;
+}
