@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3326832AD0BE720048E4C7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326822AD0BE720048E4C7 /* HomeView.swift */; };
+		7A3326852AD0BE940048E4C7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326842AD0BE940048E4C7 /* ListView.swift */; };
+		7A3326872AD0BE9E0048E4C7 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326862AD0BE9E0048E4C7 /* AccountView.swift */; };
 		90C946A62ACB452400B9A984 /* RecipeYumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946A52ACB452400B9A984 /* RecipeYumApp.swift */; };
 		90C946A82ACB452400B9A984 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946A72ACB452400B9A984 /* ContentView.swift */; };
 		90C946AA2ACB452700B9A984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C946A92ACB452700B9A984 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A3326822AD0BE720048E4C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7A3326842AD0BE940048E4C7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		7A3326862AD0BE9E0048E4C7 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		90C946A22ACB452400B9A984 /* RecipeYum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeYum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C946A52ACB452400B9A984 /* RecipeYumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumApp.swift; sourceTree = "<group>"; };
 		90C946A72ACB452400B9A984 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 				90C946A72ACB452400B9A984 /* ContentView.swift */,
 				90C946A92ACB452700B9A984 /* Assets.xcassets */,
 				90C946AB2ACB452700B9A984 /* Preview Content */,
+				7A3326822AD0BE720048E4C7 /* HomeView.swift */,
+				7A3326842AD0BE940048E4C7 /* ListView.swift */,
+				7A3326862AD0BE9E0048E4C7 /* AccountView.swift */,
 			);
 			path = RecipeYum;
 			sourceTree = "<group>";
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3326852AD0BE940048E4C7 /* ListView.swift in Sources */,
+				7A3326832AD0BE720048E4C7 /* HomeView.swift in Sources */,
 				90C946A82ACB452400B9A984 /* ContentView.swift in Sources */,
 				90C946A62ACB452400B9A984 /* RecipeYumApp.swift in Sources */,
+				7A3326872AD0BE9E0048E4C7 /* AccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
