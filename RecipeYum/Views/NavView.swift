@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  NavView.swift
 //  RecipeYum
 //
-//  Created by Atsuki on 2023-10-02.
+//  Created by Isaac Rudy on 2023-10-13.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct NavView: View {
     var body: some View {
         TabView {
             HomeView().tabItem {
@@ -27,5 +27,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    NavView()
 }
