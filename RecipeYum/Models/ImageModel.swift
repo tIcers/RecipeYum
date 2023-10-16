@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import Combine
+
+struct ImageModel : Identifiable{
+    let id:UUID
+    let imageURL:URL
+    
+    init(id:UUID = UUID(), imageURL:URL){
+        self.id = id
+        self.imageURL = imageURL
+    }
+}
