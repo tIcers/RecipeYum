@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct EdamamAPIResponse: Decodable {
+    let hits: [Hit]
+
+    struct Hit: Decodable {
+        let recipe: Recipe
+
+        struct Recipe: Decodable {
+            let image: String
+        }
+    }
+}
