@@ -31,6 +31,6 @@ struct ImageView: View {
                     .scaledToFill()
             }
         }
-        .frame(height: 200)
+        .frame(height: 100)
     }
 }
