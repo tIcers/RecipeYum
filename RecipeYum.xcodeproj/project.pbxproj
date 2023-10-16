@@ -39,6 +39,12 @@
 		7A3326832AD0BE720048E4C7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326822AD0BE720048E4C7 /* HomeView.swift */; };
 		7A3326852AD0BE940048E4C7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326842AD0BE940048E4C7 /* ListView.swift */; };
 		7A3326872AD0BE9E0048E4C7 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326862AD0BE9E0048E4C7 /* AccountView.swift */; };
+		9098C0A82ADDAC7700D2905D /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0A72ADDAC7700D2905D /* ImageListViewModel.swift */; };
+		9098C0AA2ADDAF8300D2905D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0A92ADDAF8300D2905D /* ImageModel.swift */; };
+		9098C0AC2ADDB02200D2905D /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0AB2ADDB02200D2905D /* ImageView.swift */; };
+		9098C0AE2ADDCDE200D2905D /* EdamamAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0AD2ADDCDE200D2905D /* EdamamAPIResponse.swift */; };
+		9098C0B02ADDF67900D2905D /* ImageDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0AF2ADDF67900D2905D /* ImageDetailPage.swift */; };
+		9098C0B32ADDF6FA00D2905D /* DictionaryUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0B22ADDF6FA00D2905D /* DictionaryUrl.swift */; };
 		90C946A62ACB452400B9A984 /* RecipeYumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946A52ACB452400B9A984 /* RecipeYumApp.swift */; };
 		90C946A82ACB452400B9A984 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946A72ACB452400B9A984 /* ContentView.swift */; };
 		90C946AA2ACB452700B9A984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C946A92ACB452700B9A984 /* Assets.xcassets */; };
@@ -71,6 +77,12 @@
 		7A3326822AD0BE720048E4C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A3326842AD0BE940048E4C7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		7A3326862AD0BE9E0048E4C7 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		9098C0A72ADDAC7700D2905D /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
+		9098C0A92ADDAF8300D2905D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		9098C0AB2ADDB02200D2905D /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		9098C0AD2ADDCDE200D2905D /* EdamamAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdamamAPIResponse.swift; sourceTree = "<group>"; };
+		9098C0AF2ADDF67900D2905D /* ImageDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailPage.swift; sourceTree = "<group>"; };
+		9098C0B22ADDF6FA00D2905D /* DictionaryUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryUrl.swift; sourceTree = "<group>"; };
 		90C946A22ACB452400B9A984 /* RecipeYum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeYum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C946A52ACB452400B9A984 /* RecipeYumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumApp.swift; sourceTree = "<group>"; };
 		90C946A72ACB452400B9A984 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +155,8 @@
 				7A3326842AD0BE940048E4C7 /* ListView.swift */,
 				7A3326862AD0BE9E0048E4C7 /* AccountView.swift */,
 				7A07C29A2AD9F586009980D2 /* NavView.swift */,
+				9098C0AB2ADDB02200D2905D /* ImageView.swift */,
+				9098C0AF2ADDF67900D2905D /* ImageDetailPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				7A07C2612AD9F442009980D2 /* ContentViewViewModel.swift */,
+				9098C0A72ADDAC7700D2905D /* ImageListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -158,8 +173,18 @@
 		7A07C29C2AD9F630009980D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9098C0A92ADDAF8300D2905D /* ImageModel.swift */,
+				9098C0AD2ADDCDE200D2905D /* EdamamAPIResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9098C0B12ADDF6D300D2905D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9098C0B22ADDF6FA00D2905D /* DictionaryUrl.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		90C946992ACB452300B9A984 = {
@@ -185,6 +210,7 @@
 		90C946A42ACB452400B9A984 /* RecipeYum */ = {
 			isa = PBXGroup;
 			children = (
+				9098C0B12ADDF6D300D2905D /* Extensions */,
 				7A07C29C2AD9F630009980D2 /* Models */,
 				7A07C2602AD9F42F009980D2 /* ViewModels */,
 				7A07C25F2AD9F410009980D2 /* Views */,
@@ -382,13 +408,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9098C0AC2ADDB02200D2905D /* ImageView.swift in Sources */,
 				7A3326852AD0BE940048E4C7 /* ListView.swift in Sources */,
 				7A3326832AD0BE720048E4C7 /* HomeView.swift in Sources */,
 				90C946A82ACB452400B9A984 /* ContentView.swift in Sources */,
+				9098C0AE2ADDCDE200D2905D /* EdamamAPIResponse.swift in Sources */,
 				90C946A62ACB452400B9A984 /* RecipeYumApp.swift in Sources */,
+				9098C0AA2ADDAF8300D2905D /* ImageModel.swift in Sources */,
+				9098C0B02ADDF67900D2905D /* ImageDetailPage.swift in Sources */,
 				7A3326872AD0BE9E0048E4C7 /* AccountView.swift in Sources */,
 				7A07C2622AD9F442009980D2 /* ContentViewViewModel.swift in Sources */,
+				9098C0A82ADDAC7700D2905D /* ImageListViewModel.swift in Sources */,
 				7A07C29B2AD9F586009980D2 /* NavView.swift in Sources */,
+				9098C0B32ADDF6FA00D2905D /* DictionaryUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
