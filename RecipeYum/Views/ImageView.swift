@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct ImageView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    let imageURL: URL
 
-#Preview {
-    ImageView()
+    var body: some View {
+        AsyncImage(url: imageURL) { phase in
+            switch phase {
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFill()
+            case .failure:
+                Image(systemName: "photo.fill")
+                    .resizable()
+                    .scaledToFill()
+            case .empty:
+                Image(systemName: "photo")
+                    .resizable()
+                    .scaledToFill()
+            @unknown default:
+                Image(systemName: "photo")
+                    .resizable()
+                    .scaledToFill()
+            }
+        }
+        .frame(height: 200)
+    }
 }
