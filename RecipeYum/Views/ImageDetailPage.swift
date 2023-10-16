@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ImageDetailPage: View {
+    let imageURL: URL
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ImageView(imageURL: imageURL)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Image Detail")
     }
 }
 
-#Preview {
-    ImageDetailPage()
-}
