@@ -44,7 +44,6 @@ struct AccountView: View {
                 }
 
         }
-        Spacer()
     }
 }
 
