@@ -14,7 +14,7 @@ struct ContentView: View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
             NavView()
         } else {
-            Text("Hello")
+            LoginView()
         }
     }
 }
