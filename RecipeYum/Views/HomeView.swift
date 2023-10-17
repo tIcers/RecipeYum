@@ -32,7 +32,7 @@ struct HomeView: View {
                     viewModel.fetchRandomImages()
                 }
             }
-            .searchable(text: $searchText, prompt: "Search images...")
+            .searchable(text: $searchText, prompt: "Search food...")
         }
     }
 }
