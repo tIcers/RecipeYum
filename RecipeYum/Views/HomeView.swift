@@ -10,12 +10,19 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel = ImageListViewModel()
     var body: some View {
-            NavigationView {
-                List(viewModel.images) { image in
-                    NavigationLink(destination: ImageDetailPage(imageURL: image.imageURL)) {
-                        ImageView(imageURL: image.imageURL)
-                            .cornerRadius(10)
-                            .padding(8)
+        NavigationView {
+            let columns = [
+                GridItem(.flexible()),
+                GridItem(.flexible())
+            ]
+            ScrollView{
+                LazyVGrid(columns: columns) {
+                    ForEach(viewModel.images) { image in
+                        NavigationLink(destination: ImageDetailPage(imageURL: image.imageURL)) {
+                            ImageView(imageURL: image.imageURL)
+                                .cornerRadius(10)
+                                .padding(8)
+                        }
                     }
                 }
                 .navigationTitle("Recipes for you!")
@@ -25,6 +32,9 @@ struct HomeView: View {
             }
         }
     }
+}
+            
+
 
 #Preview {
     HomeView()
