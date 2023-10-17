@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel = ImageListViewModel()
+    @State private var searchText = ""
+
     var body: some View {
         NavigationView {
             let columns = [
@@ -25,14 +27,16 @@ struct HomeView: View {
                         }
                     }
                 }
-                .navigationTitle("Recipes for you!")
+                .navigationTitle("Today's Meals")
                 .onAppear {
                     viewModel.fetchRandomImages()
                 }
             }
+            .searchable(text: $searchText, prompt: "Search images...")
         }
     }
 }
+
             
 
 
