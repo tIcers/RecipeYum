@@ -13,7 +13,6 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack{
-                Spacer()
                 // Header
                 HeaderView(title: "Login", subtitle: "RecipeYum", login_image: Image("login_img"))
                 

@@ -39,6 +39,7 @@
 		7A3326832AD0BE720048E4C7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326822AD0BE720048E4C7 /* HomeView.swift */; };
 		7A3326852AD0BE940048E4C7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326842AD0BE940048E4C7 /* ListView.swift */; };
 		7A3326872AD0BE9E0048E4C7 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326862AD0BE9E0048E4C7 /* AccountView.swift */; };
+		7A4F16402AE32DB900BC34EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A4F163F2AE32DB900BC34EC /* GoogleService-Info.plist */; };
 		8BAD15372ADE5A1E00DDE7D7 /* AccountViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD15362ADE5A1E00DDE7D7 /* AccountViewViewModel.swift */; };
 		8BCFC7D32ADE438F00FE94C2 /* LogInViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7D22ADE438F00FE94C2 /* LogInViewViewModel.swift */; };
 		8BCFC7D52ADE446300FE94C2 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7D42ADE446300FE94C2 /* RegisterViewViewModel.swift */; };
@@ -85,6 +86,7 @@
 		7A3326822AD0BE720048E4C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A3326842AD0BE940048E4C7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		7A3326862AD0BE9E0048E4C7 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		7A4F163F2AE32DB900BC34EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BAD15362ADE5A1E00DDE7D7 /* AccountViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewViewModel.swift; sourceTree = "<group>"; };
 		8BCFC7D22ADE438F00FE94C2 /* LogInViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewViewModel.swift; sourceTree = "<group>"; };
 		8BCFC7D42ADE446300FE94C2 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
@@ -205,16 +207,10 @@
 		8BCFC7D82ADE450200FE94C2 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				7A4F163F2AE32DB900BC34EC /* GoogleService-Info.plist */,
 				8BCFC7D92ADE451700FE94C2 /* Extensions.swift */,
 			);
 			path = Others;
-			sourceTree = "<group>";
-		};
-		8BCFC7E12ADE48DF00FE94C2 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		9098C0B12ADDF6D300D2905D /* Extensions */ = {
@@ -248,7 +244,6 @@
 		90C946A42ACB452400B9A984 /* RecipeYum */ = {
 			isa = PBXGroup;
 			children = (
-				8BCFC7E12ADE48DF00FE94C2 /* Images */,
 				9098C0B12ADDF6D300D2905D /* Extensions */,
 				7A07C29C2AD9F630009980D2 /* Models */,
 				7A07C2602AD9F42F009980D2 /* ViewModels */,
@@ -424,6 +419,7 @@
 			files = (
 				90C946AD2ACB452700B9A984 /* Preview Assets.xcassets in Resources */,
 				90C946AA2ACB452700B9A984 /* Assets.xcassets in Resources */,
+				7A4F16402AE32DB900BC34EC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,14 +628,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RecipeYum/Preview Content\"";
-				DEVELOPMENT_TEAM = MCXXUBUZW7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RecipeYum;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -661,14 +657,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RecipeYum/Preview Content\"";
-				DEVELOPMENT_TEAM = MCXXUBUZW7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = RecipeYum;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
