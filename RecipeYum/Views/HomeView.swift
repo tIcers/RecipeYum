@@ -21,7 +21,7 @@ struct HomeView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.images) { image in
                         NavigationLink(destination: ImageDetailPage(imageURL: image.imageURL)) {
-                            ImageView(imageURL: image.imageURL)
+                            ImageView(imageURL: image.imageURL, foodName: image.foodName)
                                 .cornerRadius(10)
                                 .padding(8)
                         }

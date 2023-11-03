@@ -15,6 +15,7 @@ struct EdamamAPIResponse: Decodable {
 
         struct Recipe: Decodable {
             let image: String
+            let label: String
         }
     }
 }

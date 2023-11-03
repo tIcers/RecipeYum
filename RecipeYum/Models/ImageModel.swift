@@ -11,9 +11,11 @@ import Combine
 struct ImageModel : Identifiable{
     let id:UUID
     let imageURL:URL
+    let foodName:String
     
-    init(id:UUID = UUID(), imageURL:URL){
+    init(id:UUID = UUID(), imageURL:URL, foodName:String){
         self.id = id
         self.imageURL = imageURL
+        self.foodName = foodName
     }
 }

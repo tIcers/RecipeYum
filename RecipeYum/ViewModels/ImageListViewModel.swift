@@ -37,7 +37,7 @@ class ImageListViewModel: ObservableObject{
                        }
                    }, receiveValue: { [weak self] response in
                        let imageURLs = response.hits.map { $0.recipe.image }
-                       let randomImages = imageURLs.compactMap { ImageModel(imageURL: URL(string: $0)!) }
+                       let randomImages = imageURLs.compactMap {ImageModel(imageURL: URL(string: $0)!, foodName: "") }
                        self?.images = randomImages.shuffled()
                    })
                    .store(in: &cancellables)
