@@ -6,11 +6,9 @@
 //
 
 import SwiftUI
-
 struct HomeView: View {
     @ObservedObject var viewModel = ImageListViewModel()
     @State private var searchText = ""
-
     var body: some View {
         NavigationView {
             let columns = [
@@ -21,7 +19,7 @@ struct HomeView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.images) { image in
                         NavigationLink(destination: ImageDetailPage(imageURL: image.imageURL)) {
-                            ImageView(imageURL: image.imageURL, foodName: image.foodName)
+                            ImageView(imageURL: image.imageURL)
                                 .cornerRadius(10)
                                 .padding(8)
                         }
@@ -36,9 +34,6 @@ struct HomeView: View {
         }
     }
 }
-
-            
-
 
 #Preview {
     HomeView()
