@@ -15,7 +15,7 @@ struct ImageDetailPage: View {
     var body: some View {
         ScrollView {
             VStack {
-                ImageView(imageURL: imageModel.imageURL)
+                ImageView(imageURL: imageModel.imageURL, title: nil, isFavorite: .constant(false))
                     .scaledToFit()
                     .frame(width: 300, height: 300)
                 
