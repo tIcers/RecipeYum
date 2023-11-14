@@ -18,7 +18,7 @@ struct HomeView: View {
             ScrollView{
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.images) { image in
-                        NavigationLink(destination: ImageDetailPage(imageURL: image.imageURL)) {
+                        NavigationLink(destination: ImageDetailPage(imageModel: image)) { // Update this line
                             ImageView(imageURL: image.imageURL)
                                 .cornerRadius(10)
                                 .padding(8)
