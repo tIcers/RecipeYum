@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var viewModel = ImageListViewModel()
+    @State private var favorites: Set<UUID> = []
 
     var body: some View {
         VStack {
@@ -23,7 +24,18 @@ struct SearchView: View {
 
             List(viewModel.images, id: \.id) { imageModel in
                 HStack {
-                    ImageView(imageURL: imageModel.imageURL)
+                    ImageView(
+                        imageURL: imageModel.imageURL,
+                        title: imageModel.label,
+                        isFavorite: .constant(favorites.contains(imageModel.id))
+                    )
+                    .onTapGesture {
+                        if favorites.contains(imageModel.id) {
+                            favorites.remove(imageModel.id)
+                        } else {
+                            favorites.insert(imageModel.id)
+                        }
+                    }
                     VStack(alignment: .leading) {
                         Text(imageModel.label)
                     }
@@ -32,6 +44,7 @@ struct SearchView: View {
         }
     }
 }
+
 
 
 #Preview {

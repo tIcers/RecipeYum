@@ -9,27 +9,43 @@ import SwiftUI
 
 struct ImageView: View {
     let imageURL: URL
+    let title: String?
+    @Binding var isFavorite: Bool
+
     var body: some View {
-        AsyncImage(url: imageURL) { phase in
-            switch phase {
-            case .success(let image):
-                image
-                    .resizable()
-                    .scaledToFill()
-            case .failure:
-                Image(systemName: "photo.fill")
-                    .resizable()
-                    .scaledToFill()
-            case .empty:
-                Image(systemName: "photo")
-                    .resizable()
-                    .scaledToFill()
-            @unknown default:
-                Image(systemName: "photo")
-                    .resizable()
-                    .scaledToFill()
+        VStack {
+            AsyncImage(url: imageURL) { phase in
+                switch phase {
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFit()
+                case .failure, .empty:
+                    Image(systemName: "photo")
+                        .resizable()
+                        .scaledToFit()
+                }
             }
+            .frame(height: 100)
+            .cornerRadius(10)
+
+            if let title = title {
+                Text(title)
+                    .font(.caption)
+                    .lineLimit(1)
+            }
+
+            Button(action: {
+                self.isFavorite.toggle()
+            }) {
+                Image(systemName: isFavorite == true ? "heart.fill" : "heart")
+                    .foregroundColor(isFavorite == true ? .red : .gray)
+            }
+            .buttonStyle(PlainButtonStyle())
+            .padding(.top, 2)
+            .opacity(isFavorite != nil ? 1 : 0) 
         }
-        .frame(height: 100)
     }
 }
+
+
