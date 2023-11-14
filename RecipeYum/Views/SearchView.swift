@@ -8,10 +8,31 @@
 import SwiftUI
 
 struct SearchView: View {
+    @ObservedObject var viewModel = ImageListViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("Search Recipes", text: $viewModel.searchString)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            Button("Search") {
+                viewModel.fetchRecipes(for: viewModel.searchString)
+            }
+            .padding()
+
+            List(viewModel.images, id: \.id) { imageModel in
+                HStack {
+                    ImageView(imageURL: imageModel.imageURL)
+                    VStack(alignment: .leading) {
+                        Text(imageModel.label)
+                    }
+                }
+            }
+        }
     }
 }
+
 
 #Preview {
     SearchView()
