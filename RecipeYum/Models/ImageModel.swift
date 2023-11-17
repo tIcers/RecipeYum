@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-struct ImageModel: Identifiable {
+struct ImageModel: Codable, Identifiable {
     let id: UUID
     let imageURL: URL
     let label: String

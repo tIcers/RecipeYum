@@ -12,7 +12,8 @@ struct ContentView: View {
 
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-            NavView()
+            let _ = print(viewModel.currentUserId)
+            NavView(userId: viewModel.currentUserId)
         } else {
             LoginView()
         }

@@ -11,6 +11,7 @@ struct HomeView: View {
     @ObservedObject var viewModel = ImageListViewModel()
     @State private var searchText = ""
     @State private var favorites: Set<UUID> = []
+    @State var userId: String
 
     private var gridView: some View {
         let columns = [
@@ -20,7 +21,7 @@ struct HomeView: View {
 
         return LazyVGrid(columns: columns) {
             ForEach(viewModel.images) { image in
-                NavigationLink(destination: ImageDetailPage(imageModel: image)) {
+                NavigationLink(destination: ImageDetailPage(imageModel: image, userId: userId)) {
                     ImageView(imageURL: image.imageURL, title: image.label, isFavorite: favoriteBinding(for: image.id))
                         .cornerRadius(10)
                         .padding(8)
@@ -69,5 +70,5 @@ struct HomeView: View {
 
 
 #Preview {
-    HomeView()
+    HomeView(userId: "sample")
 }

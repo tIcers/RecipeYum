@@ -36,7 +36,6 @@ struct RegisterView: View {
             SecureField("Password", text: $viewModel.password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            Spacer()
             
             Button("Create Account")
             {
@@ -46,7 +45,27 @@ struct RegisterView: View {
             .controlSize(.large)
         }
         .offset(y: -50)
-        
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
+        Spacer()
         Spacer()
     }
 }

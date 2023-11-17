@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
 struct AccountView: View {
     @StateObject var viewModel = AccountViewViewModel()
+    
+    
+    init(userId: String) {
+    }
     
     var body: some View {
         // Header
@@ -18,35 +23,55 @@ struct AccountView: View {
             
             // Register Form
                 Form {
-                    if !viewModel.errMsg.isEmpty {
-                        Text(viewModel.errMsg)
-                            .foregroundColor(.red)
-                    }
+//                    if !viewModel.errMsg.isEmpty {
+//                        Text(viewModel.errMsg)
+//                            .foregroundColor(.red)
+//                    }
+                    let _ = setUser()
                     
-                    TextField("Full name", text: $viewModel.name)
+                    Text("Full Name:")
+                    TextField("Full name", text: $viewModel.user.name)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .autocorrectionDisabled()
 
-                    TextField("Email", text: $viewModel.email)
+                    Text("Email: ")
+                    TextField("Email", text: $viewModel.user.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                         .autocorrectionDisabled()
                     
-                    SecureField("Password", text: $viewModel.password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
                     
-                    Spacer()
-                    
-                    Button("Update Account")
-                    {}
-                    .buttonStyle(.borderedProminent)
+                    Button("Update") {
+                        viewModel.logout()
+                    }
+                    .buttonStyle(BorderedButtonStyle()) // Use BorderedButtonStyle
                     .controlSize(.large)
+                    .background(Color.blue) // Change the background color here
+                    .cornerRadius(8)
+                    .padding()
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    
+                    Button("Logout") {
+                        viewModel.logout()
+                    }
+                    .buttonStyle(BorderedButtonStyle()) // Use BorderedButtonStyle
+                    .controlSize(.large)
+                    .background(Color.red) // Change the background color here
+                    .cornerRadius(8)
+                    .padding()
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
                 }
 
         }
     }
+    
+    func setUser() {
+        viewModel.fetchUser()
+    }
 }
 
 #Preview {
-    AccountView()
+    AccountView(userId: "sample")
 }

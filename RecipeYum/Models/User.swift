@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct User : Codable {
-    let id: String
-    let name: String
-    let email: String
-    let joined: TimeInterval
+struct User : Codable, Identifiable {
+    var id: String
+    var name: String
+    var email: String
+    var joined: TimeInterval
 }
 

@@ -6,11 +6,21 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
+import FirebaseAuth
+import FirebaseFirestore
 
 struct ImageDetailPage: View {
     let imageModel: ImageModel
     let formatter = NumberFormatter()
+    var userId: String
+    @FirestoreQuery var images: [ImageModel]
     
+    init(imageModel: ImageModel, userId: String) {
+        self.imageModel = imageModel
+        self._images = FirestoreQuery(collectionPath: "users/\(userId)/recipes")
+        self.userId = userId
+    }
     
     var body: some View {
         ScrollView {
@@ -53,16 +63,31 @@ struct ImageDetailPage: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    // Add your save dish functionality here
+                if !images.contains(where: { item in
+                    return item.label == imageModel.label
                 }) {
-                    Text("Save Dish")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                    Button(action: {
+                        saveRecipe()
+                    }) {
+                        Text("Save Dish")
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding(.bottom, 20)
+                } else {
+                    Button(action: {
+                        deleteRecipe()
+                    }) {
+                        Text("Delete Dish")
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding(.bottom, 20)
                 }
-                .padding(.bottom, 20)
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Recipe Detail")
@@ -77,6 +102,28 @@ struct ImageDetailPage: View {
 
             return "\(formatter.string(from: NSNumber(value: value)) ?? "")"
         }
+    
+    func saveRecipe() {
+        let newId = imageModel.id.uuidString
+        
+        // Save the model
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(userId)
+            .collection("recipes")
+            .document(newId)
+            .setData(imageModel.asDictionary())
+    }
+    
+    func deleteRecipe() {
+        // Save the model
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(userId)
+            .collection("recipes")
+            .document(imageModel.id.uuidString)
+            .delete()
+    }
 }
 
 

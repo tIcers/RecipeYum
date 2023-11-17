@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 
 class ContentViewViewModel: ObservableObject {
-    @Published var currentUserId: String = "sample"
+    @Published var currentUserId: String = ""
     private var handler: AuthStateDidChangeListenerHandle?
     
     init() {
@@ -18,6 +18,7 @@ class ContentViewViewModel: ObservableObject {
                 self?.currentUserId = user?.uid ?? ""
             }
         }
+        print("hello")
     }
     
     public var isSignedIn: Bool {

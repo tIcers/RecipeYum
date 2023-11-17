@@ -39,6 +39,7 @@
 		7A3326832AD0BE720048E4C7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326822AD0BE720048E4C7 /* HomeView.swift */; };
 		7A3326852AD0BE940048E4C7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326842AD0BE940048E4C7 /* ListView.swift */; };
 		7A3326872AD0BE9E0048E4C7 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3326862AD0BE9E0048E4C7 /* AccountView.swift */; };
+		7A4F850F2B07F087009518ED /* ListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F850E2B07F087009518ED /* ListViewViewModel.swift */; };
 		8B1B01712B01F67B000E7578 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B01702B01F67B000E7578 /* GoogleService-Info.plist */; };
 		8B1B01752B0206CD000E7578 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B01742B0206CD000E7578 /* Recipe.swift */; };
 		8B70E16E2B020E0D000219B5 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70E16D2B020E0D000219B5 /* NutritionView.swift */; };
@@ -89,6 +90,7 @@
 		7A3326822AD0BE720048E4C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A3326842AD0BE940048E4C7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		7A3326862AD0BE9E0048E4C7 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		7A4F850E2B07F087009518ED /* ListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewViewModel.swift; sourceTree = "<group>"; };
 		8B1B01702B01F67B000E7578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B1B01742B0206CD000E7578 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		8B70E16D2B020E0D000219B5 /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				8BCFC7D22ADE438F00FE94C2 /* LogInViewViewModel.swift */,
 				8BCFC7D42ADE446300FE94C2 /* RegisterViewViewModel.swift */,
 				8BAD15362ADE5A1E00DDE7D7 /* AccountViewViewModel.swift */,
+				7A4F850E2B07F087009518ED /* ListViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				90C946A82ACB452400B9A984 /* ContentView.swift in Sources */,
 				8BCFC7D72ADE44AC00FE94C2 /* User.swift in Sources */,
 				9098C0AE2ADDCDE200D2905D /* EdamamAPIResponse.swift in Sources */,
+				7A4F850F2B07F087009518ED /* ListViewViewModel.swift in Sources */,
 				8BCFC7DE2ADE45DC00FE94C2 /* HeaderView.swift in Sources */,
 				8BCFC7D52ADE446300FE94C2 /* RegisterViewViewModel.swift in Sources */,
 				8B70E16E2B020E0D000219B5 /* NutritionView.swift in Sources */,
