@@ -25,9 +25,26 @@ struct ImageDetailPage: View {
     var body: some View {
         ScrollView {
             VStack {
-                ImageView(imageURL: imageModel.imageURL, title: nil, isFavorite: .constant(false))
-                    .scaledToFit()
-                    .frame(width: 300, height: 300)
+                AsyncImage(url: imageModel.imageURL) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .scaledToFit()
+                    case .failure, .empty:
+                        Image(systemName: "photo")
+                            .resizable()
+                            .scaledToFit()
+                    @unknown default:
+                        Text("Unknown Image Phase")
+                    }
+                }
+                .frame(width: 300, height: 300)
+                .cornerRadius(10)
+                
+//                ImageView(imageURL: imageModel.imageURL, title: nil, isFavorite: .constant(false))
+//                    .scaledToFit()
+//                    .frame(width: 300, height: 300)
                 
                 Text("\(imageModel.label)")
                     .font(.title)
@@ -55,7 +72,11 @@ struct ImageDetailPage: View {
                         .fixedSize(horizontal: false, vertical: true) // Allow multiline text to wrap
                         .padding(.bottom, 8) // Add padding between each line of ingredients
                     
-                    // Add other details as needed
+                    if let shareAsURL = URL(string: imageModel.shareAs) {
+                        Link("Link: \(imageModel.label)", destination: shareAsURL)
+                            .padding(.bottom, 8)
+                            .foregroundColor(.blue)
+                    }
                 }
                 .padding()
                 .background(Color.gray.opacity(0.1))

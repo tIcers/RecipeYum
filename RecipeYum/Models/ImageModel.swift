@@ -13,6 +13,7 @@ struct ImageModel: Codable, Identifiable {
     let imageURL: URL
     let label: String
     let calories: Double
+    let shareAs: String
     let cuisineType: [String]
     let mealType: [String]
     let dietLabels: [String]
@@ -27,6 +28,7 @@ struct ImageModel: Codable, Identifiable {
         imageURL: URL,
         label: String,
         calories: Double,
+        shareAs: String,
         cuisineType: [String],
         mealType: [String],
         dietLabels: [String],
@@ -40,6 +42,7 @@ struct ImageModel: Codable, Identifiable {
         self.imageURL = imageURL
         self.label = label
         self.calories = calories
+        self.shareAs = shareAs
         self.cuisineType = cuisineType
         self.mealType = mealType
         self.dietLabels = dietLabels

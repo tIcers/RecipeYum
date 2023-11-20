@@ -44,6 +44,7 @@ class ImageListViewModel: ObservableObject {
                         imageURL: URL(string: hit.recipe.image)!,
                         label: hit.recipe.label,
                         calories: hit.recipe.calories,
+                        shareAs: hit.recipe.shareAs,
                         cuisineType: hit.recipe.cuisineType,
                         mealType: hit.recipe.mealType,
                         dietLabels: hit.recipe.dietLabels,

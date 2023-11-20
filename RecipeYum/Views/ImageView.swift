@@ -24,6 +24,8 @@ struct ImageView: View {
                     Image(systemName: "photo")
                         .resizable()
                         .scaledToFit()
+                @unknown default:
+                    Text("Unknown Image Phase")
                 }
             }
             .frame(height: 100)
@@ -47,5 +49,3 @@ struct ImageView: View {
         }
     }
 }
-
-

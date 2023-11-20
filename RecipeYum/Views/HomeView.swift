@@ -37,11 +37,11 @@ struct HomeView: View {
             }
             .navigationTitle("Today's Meals")
             .searchable(text: $searchText, prompt: "Search food...")
-            .onChange(of: searchText) { newValue in
-                if newValue.isEmpty {
+            .onChange(of: searchText) {
+                if searchText.isEmpty {
                     viewModel.fetchRandomImages()
                 } else {
-                    viewModel.fetchRecipes(for: newValue)
+                    viewModel.fetchRecipes(for: searchText)
                 }
             }
             .onAppear {
