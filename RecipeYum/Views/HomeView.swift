@@ -11,6 +11,7 @@ struct HomeView: View {
     @ObservedObject var viewModel = ImageListViewModel()
     @State private var searchText = ""
     @State private var favorites: Set<UUID> = []
+    @State private var refreshID = UUID()
     @State var userId: String
 
     private var gridView: some View {
@@ -32,8 +33,15 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView {
-            ScrollView {
-                gridView
+            ScrollViewReader { scrollViewProxy in
+                ScrollView {
+                    gridView
+                        .id(refreshID)
+                }
+                .refreshable {
+                    viewModel.fetchRandomImages()
+                }
+                .onChange(of: searchText) { _ in refreshID = UUID() }
             }
             .navigationTitle("Today's Meals")
             .searchable(text: $searchText, prompt: "Search food...")
@@ -42,11 +50,6 @@ struct HomeView: View {
                     viewModel.fetchRandomImages()
                 } else {
                     viewModel.fetchRecipes(for: searchText)
-                }
-            }
-            .onAppear {
-                if searchText.isEmpty {
-                    viewModel.fetchRandomImages()
                 }
             }
         }
