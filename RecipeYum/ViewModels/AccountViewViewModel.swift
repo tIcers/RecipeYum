@@ -12,7 +12,9 @@ import FirebaseFirestore
 class AccountViewViewModel: ObservableObject {
     @Published var user: User = User(id: "", name: "", email: "", joined: TimeInterval())
     
-    init() {}
+    init() {
+        fetchUser()
+    }
     
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else {
@@ -37,15 +39,34 @@ class AccountViewViewModel: ObservableObject {
         }
     }
     
+    func update(completion: @escaping (Bool, String) -> Void) {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            completion(false, "User ID not available")
+            return
+        }
+
+        let db = Firestore.firestore()
+
+        db.collection("users").document(userId).updateData([
+            "name": user.name,
+            "email": user.email
+        ]) { error in
+            if let error = error {
+                print("Error updating user data: \(error)")
+                completion(false, error.localizedDescription)
+            } else {
+                print("User data successfully updated")
+                completion(true, "")
+            }
+        }
+    }
+
+    
     func logout() {
         do {
             try Auth.auth().signOut()
         } catch {
             print (error)
         }
-    }
-    
-    func update() {
-        
     }
 }
