@@ -8,9 +8,11 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorage
 
 class AccountViewViewModel: ObservableObject {
     @Published var user: User = User(id: "", name: "", email: "", joined: TimeInterval())
+    @Published var selectedImage: UIImage? // Add this line
     
     init() {
         fetchUser()
@@ -20,14 +22,14 @@ class AccountViewViewModel: ObservableObject {
         guard let userId = Auth.auth().currentUser?.uid else {
             return
         }
-        
+
         let db = Firestore.firestore()
-        
+
         db.collection("users").document(userId).getDocument {[weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else {
                 return
             }
-            
+
             DispatchQueue.main.async {
                 self?.user = User(
                     id: data["id"] as? String ?? "",
@@ -35,10 +37,27 @@ class AccountViewViewModel: ObservableObject {
                     email: data["email"] as? String ?? "",
                     joined: data["joined"] as? TimeInterval ?? 0
                 )
+                
+                // Use the profile picture URL to load the image directly from Firebase Storage
+                let storage = Storage.storage()
+                let storageRef = storage.reference()
+                let profilePicRef = storageRef.child("profile_pictures/\(userId).jpg")
+                
+                profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                    if let error = error {
+                        print("Error downloading profile picture: \(error)")
+                    } else if let data = data, let uiImage = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self?.selectedImage = uiImage
+                        }
+                    }
+                }
             }
+            
         }
     }
-    
+
+
     func update(completion: @escaping (Bool, String) -> Void) {
         guard let userId = Auth.auth().currentUser?.uid else {
             completion(false, "User ID not available")
@@ -67,6 +86,43 @@ class AccountViewViewModel: ObservableObject {
             try Auth.auth().signOut()
         } catch {
             print (error)
+        }
+    }
+    
+    func uploadProfilePicture(imageData: Data, completion: @escaping (Bool, String) -> Void) {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            completion(false, "User ID not available")
+            return
+        }
+
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+
+        let profilePicRef = storageRef.child("profile_pictures/\(userId).jpg")
+
+        profilePicRef.putData(imageData, metadata: nil) { (metadata, error) in
+            guard let _ = metadata else {
+                completion(false, error?.localizedDescription ?? "Unknown error")
+                return
+            }
+
+            // You can also access the download URL after upload if needed
+            profilePicRef.downloadURL { (url, error) in
+                guard let _ = url else {
+                    completion(false, error?.localizedDescription ?? "Unknown error")
+                    return
+                }
+
+                // Update your user data in Firestore to store the profile picture URL
+                // For example:
+                // db.collection("users").document(userId).updateData([
+                //     "profilePictureURL": url!.absoluteString
+                // ]) { error in
+                //     // Handle the update completion
+                // }
+
+                completion(true, "Profile picture uploaded successfully")
+            }
         }
     }
 }
