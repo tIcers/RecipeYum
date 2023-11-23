@@ -28,7 +28,7 @@ struct ImageView: View {
                     Text("Unknown Image Phase")
                 }
             }
-            .frame(height: 100)
+            .frame(height: 200)
             .cornerRadius(10)
 
             if let title = title {
@@ -49,3 +49,4 @@ struct ImageView: View {
         }
     }
 }
+
