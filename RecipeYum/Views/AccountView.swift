@@ -8,6 +8,19 @@
 import SwiftUI
 import FirebaseFirestoreSwift
 
+
+//extension UINavigationController {
+//    override open func viewDidLoad() {
+//        super.viewDidLoad()
+//        appearance.configureWithTransparentBackground()
+//        appearance.backgroundImage = UIImage(named: "burger")
+//        
+//        navigationBar.standardAppearance = appearance
+//        navigationBar.compactAppearance = appearance
+//        navigationBar.scrollEdgeAppearance = appearance
+//    }
+//}
+
 struct AccountView: View {
     @StateObject var viewModel = AccountViewViewModel()
     @State private var userName: String = ""
@@ -32,7 +45,22 @@ struct AccountView: View {
             
             Section(header: Text("\(viewModel.user.name)")
                 .font(.title2)
-                .fontWeight(.semibold)) {
+                .fontWeight(.semibold)
+                .frame(maxWidth: .infinity)
+                .background(
+                            Image("bg") // Replace with the name of your background image
+                                .resizable()
+                                .scaledToFill()
+                                .edgesIgnoringSafeArea(.all)
+//                                .overlay(
+//                                    LinearGradient(
+//                                        gradient: Gradient(colors: [Color.black.opacity(0.7), Color.clear]),
+//                                        startPoint: .bottom,
+//                                        endPoint: .top
+//                                    )
+//                                )
+                        )
+            ) {
                 VStack {
                     if let image = viewModel.selectedImage {
                         Image(uiImage: image)
@@ -83,11 +111,12 @@ struct AccountView: View {
                             dismissButton: .default(Text("OK"))
                         )
                     }
-                    
+
                     
                 }
                 
             }
+            
             
             // Register Form
             Form {
@@ -99,12 +128,26 @@ struct AccountView: View {
                         TextField("\(viewModel.user.name)", text: $userName)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .autocorrectionDisabled()
+                            .onChange(of: userName) {
+                                // Add your validation logic here
+                                if userName.isEmpty {
+                                    showAlert = true
+                                    alertMessage = "Name is required."
+                                }
+                            }
                         
                         Text("Email:")
                         TextField("\(viewModel.user.email)", text: $userEmail)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .autocapitalization(.none)
                             .autocorrectionDisabled()
+                            .onChange(of: userEmail) {
+                                // Add your validation logic here
+                                if userEmail.isEmpty {
+                                    showAlert = true
+                                    alertMessage = "Email is required."
+                                }
+                            }
                     }
                     
                     Section {
@@ -150,6 +193,7 @@ struct AccountView: View {
                         }
                     }
                 }
+                
                 .padding()
                 .alert(isPresented: $showAlert) {
                     Alert(
@@ -162,6 +206,7 @@ struct AccountView: View {
             .background(Color(.systemBackground))
             .edgesIgnoringSafeArea(.all)
         }
+
     }
     
     func setUser() {
