@@ -43,7 +43,7 @@ struct HomeView: View {
                 }
                 .onChange(of: searchText) { _ in refreshID = UUID() }
             }
-            .navigationTitle("Today's Meals")
+            .navigationTitle("Meal Plans")
             .searchable(text: $searchText, prompt: "Search food...")
             .onChange(of: searchText) {
                 if searchText.isEmpty {
