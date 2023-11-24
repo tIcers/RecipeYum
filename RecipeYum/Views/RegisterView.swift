@@ -62,11 +62,7 @@ struct RegisterView: View {
         Spacer()
         Spacer()
         Spacer()
-        Spacer()
-        Spacer()
-        Spacer()
-        Spacer()
-        Spacer()
+
     }
 }
 

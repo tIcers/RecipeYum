@@ -10,12 +10,10 @@ import FirebaseFirestoreSwift
 
 struct ListView: View {
     @State var userId: String
-    @State var isTrue = true
     @FirestoreQuery var images: [ImageModel]
 
-    init(userId: String, isTrue: Bool = true) {
+    init(userId: String) {
         self.userId = userId
-        self.isTrue = isTrue
         self._images = FirestoreQuery(collectionPath: "users/\(userId)/recipes")
     }
     
@@ -29,7 +27,7 @@ struct ListView: View {
                     ForEach(images) { image in
                         let _ = print(image.imageURL)
                         NavigationLink(destination: ImageDetailPage(imageModel: image, userId: userId)) {
-                            ImageView(imageURL: image.imageURL, title: image.label, isFavorite: $isTrue)
+                            ImageView(userId: userId, imageModel: image, imageURL: image.imageURL, title: image.label)
                                 .cornerRadius(10)
                                 .padding(8)
                         }
