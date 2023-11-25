@@ -13,6 +13,14 @@ struct HomeView: View {
     @State private var favorites: Set<UUID> = []
     @State private var refreshID = UUID()
     @State var userId: String
+    @State private var selectedMealType: String = "🍳"
+    let mealTypes: [String: String] = [
+        "breakfast": "🍳",
+        "brunch": "🥐",
+        "lunch/dinner": "🍽️",
+        "snack": "🍿",
+        "teatime": "☕"
+        ]
 
     private var gridView: some View {
         let columns = [
@@ -33,28 +41,32 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView {
-            ScrollViewReader { scrollViewProxy in
-                ScrollView {
-                    gridView
-                        .id(refreshID)
+            VStack {
+                MealTypeSelector(mealTypes: mealTypes, selectedMealType: $selectedMealType) { mealType in
+                    viewModel.fetchRecipes(for: mealType)
                 }
-                .refreshable {
-                    viewModel.fetchRandomImages()
+                ScrollViewReader { scrollViewProxy in
+                    ScrollView {
+                        gridView
+                            .id(refreshID)
+                    }
+                    .refreshable {
+                        viewModel.fetchRandomImages()
+                    }
+                    .onChange(of: searchText) { _ in refreshID = UUID() }
                 }
-                .onChange(of: searchText) { _ in refreshID = UUID() }
-            }
-            .navigationTitle("Meal Plans")
-            .searchable(text: $searchText, prompt: "Search food...")
-            .onChange(of: searchText) {
-                if searchText.isEmpty {
-                    viewModel.fetchRandomImages()
-                } else {
-                    viewModel.fetchRecipes(for: searchText)
+                .navigationTitle("Meal Plans")
+                .searchable(text: $searchText, prompt: "Search food...")
+                .onChange(of: searchText) {
+                    if searchText.isEmpty {
+                        viewModel.fetchRandomImages()
+                    } else {
+                        viewModel.fetchRecipes(for: searchText)
+                    }
                 }
             }
         }
     }
-
     private func favoriteBinding(for id: UUID) -> Binding<Bool> {
         Binding<Bool>(
             get: { self.favorites.contains(id) },
