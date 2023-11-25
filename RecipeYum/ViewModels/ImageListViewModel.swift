@@ -87,7 +87,7 @@ class ImageListViewModel: ObservableObject {
             "q": query,
             "app_id": appId,
             "app_key": appKey,
-            "type": "public"
+            "type": "public",
         ]
 
         guard let url = URL(string: apiEndpoint + "?" + parameters.urlEncodedString) else { return }

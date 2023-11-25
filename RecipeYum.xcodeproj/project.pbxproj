@@ -51,6 +51,8 @@
 		8BCFC7DC2ADE45A000FE94C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7DB2ADE45A000FE94C2 /* LoginView.swift */; };
 		8BCFC7DE2ADE45DC00FE94C2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7DD2ADE45DC00FE94C2 /* HeaderView.swift */; };
 		8BCFC7E02ADE463900FE94C2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7DF2ADE463900FE94C2 /* RegisterView.swift */; };
+		9047F9732B126F6E000F208A /* MealTypeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047F9722B126F6E000F208A /* MealTypeSelectorView.swift */; };
+		9047F9752B127BD0000F208A /* MealTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047F9742B127BD0000F208A /* MealTypeButton.swift */; };
 		9098C0A82ADDAC7700D2905D /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0A72ADDAC7700D2905D /* ImageListViewModel.swift */; };
 		9098C0AA2ADDAF8300D2905D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0A92ADDAF8300D2905D /* ImageModel.swift */; };
 		9098C0AC2ADDB02200D2905D /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9098C0AB2ADDB02200D2905D /* ImageView.swift */; };
@@ -101,6 +103,8 @@
 		8BCFC7DB2ADE45A000FE94C2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8BCFC7DD2ADE45DC00FE94C2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8BCFC7DF2ADE463900FE94C2 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		9047F9722B126F6E000F208A /* MealTypeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTypeSelectorView.swift; sourceTree = "<group>"; };
+		9047F9742B127BD0000F208A /* MealTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTypeButton.swift; sourceTree = "<group>"; };
 		9098C0A72ADDAC7700D2905D /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
 		9098C0A92ADDAF8300D2905D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		9098C0AB2ADDB02200D2905D /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				8BCFC7DD2ADE45DC00FE94C2 /* HeaderView.swift */,
 				8BCFC7DF2ADE463900FE94C2 /* RegisterView.swift */,
 				8B70E16D2B020E0D000219B5 /* NutritionView.swift */,
+				9047F9722B126F6E000F208A /* MealTypeSelectorView.swift */,
+				9047F9742B127BD0000F208A /* MealTypeButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -465,6 +471,7 @@
 				8BCFC7D52ADE446300FE94C2 /* RegisterViewViewModel.swift in Sources */,
 				8B70E16E2B020E0D000219B5 /* NutritionView.swift in Sources */,
 				8BAD15372ADE5A1E00DDE7D7 /* AccountViewViewModel.swift in Sources */,
+				9047F9752B127BD0000F208A /* MealTypeButton.swift in Sources */,
 				8B1B01752B0206CD000E7578 /* Recipe.swift in Sources */,
 				90C946A62ACB452400B9A984 /* RecipeYumApp.swift in Sources */,
 				9098C0AA2ADDAF8300D2905D /* ImageModel.swift in Sources */,
@@ -474,6 +481,7 @@
 				8BCFC7DC2ADE45A000FE94C2 /* LoginView.swift in Sources */,
 				9098C0A82ADDAC7700D2905D /* ImageListViewModel.swift in Sources */,
 				7A07C29B2AD9F586009980D2 /* NavView.swift in Sources */,
+				9047F9732B126F6E000F208A /* MealTypeSelectorView.swift in Sources */,
 				8BCFC7DA2ADE451700FE94C2 /* Extensions.swift in Sources */,
 				9098C0B32ADDF6FA00D2905D /* DictionaryUrl.swift in Sources */,
 				8BCFC7D32ADE438F00FE94C2 /* LogInViewViewModel.swift in Sources */,
