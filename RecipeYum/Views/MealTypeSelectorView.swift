@@ -7,12 +7,22 @@
 
 import SwiftUI
 
-struct MealTypeSelectorView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct MealTypeSelector: View {
+    let mealTypes: [String: String]
+    @Binding var selectedMealType: String
+    var onSelect: (String) -> Void
 
-#Preview {
-    MealTypeSelectorView()
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 10) {
+                ForEach(mealTypes.sorted(by: <), id: \.key) { key, emoji in
+                    MealTypeButton(title: key, emoji: emoji) {
+                        selectedMealType = key
+                        onSelect(key)
+                    }
+                }
+            }
+            .padding(.horizontal)
+        }
+    }
 }
