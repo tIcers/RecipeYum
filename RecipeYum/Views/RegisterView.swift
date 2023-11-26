@@ -14,11 +14,12 @@ struct RegisterView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Text("Register")
                 .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.white)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .fontWeight(.bold)
+                .foregroundColor(Color(#colorLiteral(red: 0.02745098039, green: 0.4235294118, blue: 0.6823529412, alpha: 1)))
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .background(
                             Image("register")
                                 .resizable()
