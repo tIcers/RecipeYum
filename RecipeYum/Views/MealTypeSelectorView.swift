@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct MealTypeSelector: View {
-    let mealTypes: [String: String]
+    let mealTypes: [(String, String)]
     @Binding var selectedMealType: String
     var onSelect: (String) -> Void
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 10) {
-                ForEach(mealTypes.sorted(by: <), id: \.key) { key, emoji in
-                    MealTypeButton(title: key, emoji: emoji) {
-                        selectedMealType = key
-                        onSelect(key)
+                ForEach(mealTypes, id: \.0) { mealType, emoji in
+                    MealTypeButton(title: mealType, emoji: emoji) {
+                        selectedMealType = mealType
+                        onSelect(mealType)
                     }
                 }
             }
-            .padding()
+            .padding([.leading, .bottom])
         }
     }
 }
 
 #Preview {
-    let mealTypes = ["Breakfast": "🍳", "Lunch": "🥪", "Dinner": "🍲"]
+    let mealTypes = [("Breakfast", "🍳"), ("Lunch", "🥪"), ("Dinner", "🍲")]
     @State var selectedMealType: String = "Breakfast"
     return MealTypeSelector(mealTypes: mealTypes, selectedMealType: $selectedMealType) {_ in
         print("Breakfast button tapped")

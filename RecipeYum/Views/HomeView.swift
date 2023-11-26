@@ -14,13 +14,20 @@ struct HomeView: View {
     @State private var refreshID = UUID()
     @State var userId: String
     @State private var selectedMealType: String = "🍳"
-    let mealTypes: [String: String] = [
-        "breakfast": "🍳",
-        "brunch": "🥐",
-        "lunch/dinner": "🍽️",
-        "snack": "🍿",
-        "teatime": "☕"
-        ]
+    let mealTypes: [(String, String)] = [
+        ("Breakfast", "🍳"),
+        ("Lunch", "🥪"),
+        ("Dinner", "🍲"),
+        ("Snack", "🍿"),
+        ("Teatime", "☕"),
+        ("Italian", "🍝"),
+        ("Chinese", "🥢"),
+        ("Korean", "🇰🇷"),
+        ("Japanese", "🍣"),
+        ("Vietnamese", "🍜"),
+        ("Thai", "🍛"),
+        ("Burger", "🍔")
+    ]
 
     private var gridView: some View {
         let columns = [
@@ -42,6 +49,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
                 MealTypeSelector(mealTypes: mealTypes, selectedMealType: $selectedMealType) { mealType in
                     viewModel.fetchRecipes(for: mealType)
                 }
@@ -53,7 +61,7 @@ struct HomeView: View {
                     .refreshable {
                         viewModel.fetchRandomImages()
                     }
-                    .onChange(of: searchText) { _ in refreshID = UUID() }
+                    .onChange(of: searchText) { refreshID = UUID() }
                 }
                 .navigationTitle("Meal Plans")
                 .searchable(text: $searchText, prompt: "Search food...")
@@ -67,6 +75,7 @@ struct HomeView: View {
             }
         }
     }
+    
     private func favoriteBinding(for id: UUID) -> Binding<Bool> {
         Binding<Bool>(
             get: { self.favorites.contains(id) },
@@ -80,9 +89,6 @@ struct HomeView: View {
         )
     }
 }
-
-
-
 
 #Preview {
     HomeView(userId: "sample")
