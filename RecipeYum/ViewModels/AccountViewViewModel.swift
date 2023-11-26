@@ -37,25 +37,42 @@ class AccountViewViewModel: ObservableObject {
                     email: data["email"] as? String ?? "",
                     joined: data["joined"] as? TimeInterval ?? 0
                 )
+
+                // Check if there's a profile picture URL in the data
                 
-                // Use the profile picture URL to load the image directly from Firebase Storage
-                let storage = Storage.storage()
-                let storageRef = storage.reference()
-                let profilePicRef = storageRef.child("profile_pictures/\(userId).jpg")
-                
-                profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-                    if let error = error {
-                        print("Error downloading profile picture: \(error)")
-                    } else if let data = data, let uiImage = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.selectedImage = uiImage
+                    // Use the profile picture URL to load the image directly from Firebase Storage
+                    let storage = Storage.storage()
+                    let storageRef = storage.reference()
+                    let profilePicRef = storageRef.child("profile_pictures/\(userId).jpg")
+
+                    // Introduce a flag to track whether the image has been attempted to be loaded
+                    var hasLoadedImage = false
+
+                    // Fetch the image only if it hasn't been loaded yet
+                    if !hasLoadedImage {
+                        profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                            // Update the flag regardless of whether the download was successful or not
+                            hasLoadedImage = true
+
+                            if let error = error {
+                                print("Error downloading profile picture: \(error)")
+
+                                // Set selectedImage to nil or any default image if the image doesn't exist
+                                self?.selectedImage = nil
+                                hasLoadedImage = false
+                                return
+                            } else if let data = data, let uiImage = UIImage(data: data) {
+                                DispatchQueue.main.async {
+                                    self?.selectedImage = uiImage
+                                }
+                            }
                         }
                     }
-                }
+                
             }
-            
         }
     }
+
 
 
     func update(completion: @escaping (Bool, String) -> Void) {

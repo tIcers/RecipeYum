@@ -22,7 +22,15 @@ struct MealTypeSelector: View {
                     }
                 }
             }
-            .padding(.horizontal)
+            .padding()
         }
+    }
+}
+
+#Preview {
+    let mealTypes = ["Breakfast": "🍳", "Lunch": "🥪", "Dinner": "🍲"]
+    @State var selectedMealType: String = "Breakfast"
+    return MealTypeSelector(mealTypes: mealTypes, selectedMealType: $selectedMealType) {_ in
+        print("Breakfast button tapped")
     }
 }
