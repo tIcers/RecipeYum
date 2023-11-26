@@ -41,7 +41,6 @@ struct AccountView: View {
             Spacer()
             Spacer()
             Spacer()
-//            HeaderView(title: "Account", subtitle: "update info", login_image: Image("update_img"))
             
             Section(header: Text("\(viewModel.user.name)")
                 .font(.title2)
@@ -52,13 +51,6 @@ struct AccountView: View {
                                 .resizable()
                                 .scaledToFill()
                                 .edgesIgnoringSafeArea(.all)
-//                                .overlay(
-//                                    LinearGradient(
-//                                        gradient: Gradient(colors: [Color.black.opacity(0.7), Color.clear]),
-//                                        startPoint: .bottom,
-//                                        endPoint: .top
-//                                    )
-//                                )
                         )
             ) {
                 VStack {
