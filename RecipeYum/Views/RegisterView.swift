@@ -33,24 +33,26 @@ struct RegisterView: View {
                         .foregroundColor(.red)
                 }
                 
-                Section(header: Text("Register Information")) {
+                Section() {
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("Full Name:")
-                        TextField("Your full name", text: $viewModel.name)
+                        TextField("Full Name", text: $viewModel.name)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .autocorrectionDisabled()
+                            .padding(.vertical)
                         
-                        Text("Email:")
+
                         TextField("Email", text: $viewModel.email)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .autocapitalization(.none)
                             .autocorrectionDisabled()
+                            .padding(.bottom)
 
-                        Text("Password:")
                         SecureField("Password", text: $viewModel.password)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.bottom)
                     }
-                    Section {
+                    .padding()
+                    
                         Button() {
                             viewModel.register()
                         } label: {
@@ -62,9 +64,11 @@ struct RegisterView: View {
                         .background(Color(#colorLiteral(red: 0.4666666667, green: 0.768627451, blue: 0.8705882353, alpha: 1)))
                         .cornerRadius(8)
                         .foregroundColor(.white)
-                    }
+                    
+                    
                 }
             }
+            .padding(.top, -10.0) // Remove padding
         }
     }
 }
