@@ -58,7 +58,7 @@ struct LoginView: View {
                         }
                         .buttonStyle(BorderedButtonStyle())
                         .controlSize(.large)
-                        .background(Color(.accent))
+                        .background(Color(#colorLiteral(red: 0.4666666667, green: 0.768627451, blue: 0.8705882353, alpha: 1)))
                         .cornerRadius(8)
                         .foregroundColor(.white)
                     }

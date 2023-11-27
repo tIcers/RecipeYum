@@ -42,14 +42,12 @@
 		7A4F850F2B07F087009518ED /* ListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F850E2B07F087009518ED /* ListViewViewModel.swift */; };
 		8B1B01712B01F67B000E7578 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B01702B01F67B000E7578 /* GoogleService-Info.plist */; };
 		8B1B01752B0206CD000E7578 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1B01742B0206CD000E7578 /* Recipe.swift */; };
-		8B70E16E2B020E0D000219B5 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70E16D2B020E0D000219B5 /* NutritionView.swift */; };
 		8BAD15372ADE5A1E00DDE7D7 /* AccountViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAD15362ADE5A1E00DDE7D7 /* AccountViewViewModel.swift */; };
 		8BCFC7D32ADE438F00FE94C2 /* LogInViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7D22ADE438F00FE94C2 /* LogInViewViewModel.swift */; };
 		8BCFC7D52ADE446300FE94C2 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7D42ADE446300FE94C2 /* RegisterViewViewModel.swift */; };
 		8BCFC7D72ADE44AC00FE94C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7D62ADE44AC00FE94C2 /* User.swift */; };
 		8BCFC7DA2ADE451700FE94C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7D92ADE451700FE94C2 /* Extensions.swift */; };
 		8BCFC7DC2ADE45A000FE94C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7DB2ADE45A000FE94C2 /* LoginView.swift */; };
-		8BCFC7DE2ADE45DC00FE94C2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7DD2ADE45DC00FE94C2 /* HeaderView.swift */; };
 		8BCFC7E02ADE463900FE94C2 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFC7DF2ADE463900FE94C2 /* RegisterView.swift */; };
 		9047F9732B126F6E000F208A /* MealTypeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047F9722B126F6E000F208A /* MealTypeSelectorView.swift */; };
 		9047F9752B127BD0000F208A /* MealTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9047F9742B127BD0000F208A /* MealTypeButton.swift */; };
@@ -94,14 +92,12 @@
 		7A4F850E2B07F087009518ED /* ListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewViewModel.swift; sourceTree = "<group>"; };
 		8B1B01702B01F67B000E7578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B1B01742B0206CD000E7578 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		8B70E16D2B020E0D000219B5 /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
 		8BAD15362ADE5A1E00DDE7D7 /* AccountViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewViewModel.swift; sourceTree = "<group>"; };
 		8BCFC7D22ADE438F00FE94C2 /* LogInViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewViewModel.swift; sourceTree = "<group>"; };
 		8BCFC7D42ADE446300FE94C2 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 		8BCFC7D62ADE44AC00FE94C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8BCFC7D92ADE451700FE94C2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8BCFC7DB2ADE45A000FE94C2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		8BCFC7DD2ADE45DC00FE94C2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8BCFC7DF2ADE463900FE94C2 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		9047F9722B126F6E000F208A /* MealTypeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTypeSelectorView.swift; sourceTree = "<group>"; };
 		9047F9742B127BD0000F208A /* MealTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTypeButton.swift; sourceTree = "<group>"; };
@@ -186,9 +182,7 @@
 				9098C0AB2ADDB02200D2905D /* ImageView.swift */,
 				9098C0AF2ADDF67900D2905D /* ImageDetailPage.swift */,
 				8BCFC7DB2ADE45A000FE94C2 /* LoginView.swift */,
-				8BCFC7DD2ADE45DC00FE94C2 /* HeaderView.swift */,
 				8BCFC7DF2ADE463900FE94C2 /* RegisterView.swift */,
-				8B70E16D2B020E0D000219B5 /* NutritionView.swift */,
 				9047F9722B126F6E000F208A /* MealTypeSelectorView.swift */,
 				9047F9742B127BD0000F208A /* MealTypeButton.swift */,
 			);
@@ -467,9 +461,7 @@
 				8BCFC7D72ADE44AC00FE94C2 /* User.swift in Sources */,
 				9098C0AE2ADDCDE200D2905D /* EdamamAPIResponse.swift in Sources */,
 				7A4F850F2B07F087009518ED /* ListViewViewModel.swift in Sources */,
-				8BCFC7DE2ADE45DC00FE94C2 /* HeaderView.swift in Sources */,
 				8BCFC7D52ADE446300FE94C2 /* RegisterViewViewModel.swift in Sources */,
-				8B70E16E2B020E0D000219B5 /* NutritionView.swift in Sources */,
 				8BAD15372ADE5A1E00DDE7D7 /* AccountViewViewModel.swift in Sources */,
 				9047F9752B127BD0000F208A /* MealTypeButton.swift in Sources */,
 				8B1B01752B0206CD000E7578 /* Recipe.swift in Sources */,

@@ -64,7 +64,7 @@ struct HomeView: View {
                     .onChange(of: searchText) { refreshID = UUID() }
                 }
                 .navigationTitle("Meal Plans")
-                .searchable(text: $searchText, prompt: "Search food...")
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search food...")
                 .onChange(of: searchText) {
                     if searchText.isEmpty {
                         viewModel.fetchRandomImages()

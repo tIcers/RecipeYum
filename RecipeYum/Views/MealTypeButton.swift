@@ -17,7 +17,7 @@ struct MealTypeButton: View {
             VStack(spacing: 2) {
                 Text(emoji)
                     .font(.largeTitle)
-                    .frame(width: 44, height: 44) // Set a fixed size for the emoji
+                    .frame(width: 44, height: 44)
                 Text(title)
                     .font(.caption2)
             }

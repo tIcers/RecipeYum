@@ -46,29 +46,31 @@ class AccountViewViewModel: ObservableObject {
                     let profilePicRef = storageRef.child("profile_pictures/\(userId).jpg")
 
                     // Introduce a flag to track whether the image has been attempted to be loaded
-                    var hasLoadedImage = false
+                let hasLoadedImage = false
 
-                    // Fetch the image only if it hasn't been loaded yet
-                    if !hasLoadedImage {
-                        profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-                            // Update the flag regardless of whether the download was successful or not
-                            hasLoadedImage = true
-
-                            if let error = error {
+                // Fetch the image only if it hasn't been loaded yet
+                if !hasLoadedImage {
+                    profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                        if let error = error as NSError? {
+                            let errorCode = StorageErrorCode(rawValue: error.code)
+                            switch errorCode {
+                            case .objectNotFound:
+                                // The image doesn't exist, handle accordingly
                                 print("Error downloading profile picture: \(error)")
-
-                                // Set selectedImage to nil or any default image if the image doesn't exist
                                 self?.selectedImage = nil
-                                hasLoadedImage = false
                                 return
-                            } else if let data = data, let uiImage = UIImage(data: data) {
-                                DispatchQueue.main.async {
-                                    self?.selectedImage = uiImage
-                                }
+                            default:
+                                // Some other error occurred, handle accordingly
+                                print("Error downloading profile picture: \(error)")
+                                return
+                            }
+                        } else if let data = data, let uiImage = UIImage(data: data) {
+                            DispatchQueue.main.async {
+                                self?.selectedImage = uiImage
                             }
                         }
                     }
-                
+                }
             }
         }
     }

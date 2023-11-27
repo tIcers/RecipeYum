@@ -24,7 +24,7 @@ struct ImageDetailPage: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(spacing: 10) {
                 AsyncImage(url: imageModel.imageURL) { phase in
                     switch phase {
                     case .success(let image):
@@ -39,16 +39,13 @@ struct ImageDetailPage: View {
                         Text("Unknown Image Phase")
                     }
                 }
-                .frame(width: 300, height: 300)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .cornerRadius(10)
                 
-//                ImageView(imageURL: imageModel.imageURL, title: nil, isFavorite: .constant(false))
-//                    .scaledToFit()
-//                    .frame(width: 300, height: 300)
                 
                 Text("\(imageModel.label)")
                     .font(.title)
-                    .padding(.top, 10)
+                    .padding(.vertical, 10)
                 
                 
                 VStack(alignment: .leading, spacing: 8) {
@@ -56,21 +53,29 @@ struct ImageDetailPage: View {
                     Text("Nutrients:")
                         .font(.headline) // Make the text bold
                         .multilineTextAlignment(.center) // Center-align the text
-                        .padding(.bottom, 8) // Add padding between "Ingredients" and the ingredient list
+                        .padding(.bottom, 20) // Add padding between "Ingredients" and the ingredient list
                     
-                    Text("Calories: \(formattedNumber(imageModel.calories)) kcal")
-                    Text("Protein: \(formattedNumber(imageModel.protein)) g")
-                    Text("Fat: \(formattedNumber(imageModel.fat)) g")
-                    Text("Carbs: \(formattedNumber(imageModel.carbs)) g \n")
+                    let columns: [GridItem] = [
+                        GridItem(.fixed(150)),
+                        GridItem(.fixed(150))
+                    ]
+                    
+                    LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
+                        Text("Calories: \(formattedNumber(imageModel.calories)) kcal")
+                        Text("Protein: \(formattedNumber(imageModel.protein)) g")
+                        Text("Fat: \(formattedNumber(imageModel.fat)) g")
+                        Text("Carbs: \(formattedNumber(imageModel.carbs)) g")
+                    }
+                    .padding(.bottom, 20)
                     // Use joined(separator:) to add line breaks between ingredients
                     Text("Ingredients:")
                         .font(.headline) // Make the text bold
                         .multilineTextAlignment(.center) // Center-align the text
-                        .padding(.bottom, 8) // Add padding between "Ingredients" and the ingredient list
+                        .padding(.bottom, 20) // Add padding between "Ingredients" and the ingredient list
                     
-                    Text(imageModel.ingredients.joined(separator: "\n"))
+                    Text(imageModel.ingredients.map { "- \($0)" }.joined(separator: "\n"))
                         .fixedSize(horizontal: false, vertical: true) // Allow multiline text to wrap
-                        .padding(.bottom, 8) // Add padding between each line of ingredients
+                        .padding(.bottom, 10) // Add padding between each line of ingredients
                     
                     if let shareAsURL = URL(string: imageModel.shareAs) {
                         Link("Link: \(imageModel.label)", destination: shareAsURL)
@@ -87,33 +92,37 @@ struct ImageDetailPage: View {
                 if !images.contains(where: { item in
                     return item.label == imageModel.label
                 }) {
-                    Button(action: {
+                    Button {
                         saveRecipe()
-                    }) {
+                    } label: {
                         Text("Save Dish")
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .frame(maxWidth: .infinity)
                     }
+                    .buttonStyle(BorderedButtonStyle())
+                    .controlSize(.large)
+                    .background(Color(#colorLiteral(red: 0.4666666667, green: 0.768627451, blue: 0.8705882353, alpha: 1)))
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
+                    .listRowSeparator(.hidden)
                     .padding(.bottom, 20)
                 } else {
-                    Button(action: {
+                    Button {
                         deleteRecipe()
-                    }) {
+                    } label: {
                         Text("Delete Dish")
-                            .padding()
-                            .background(Color.red)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .frame(maxWidth: .infinity)
                     }
+                    .buttonStyle(BorderedButtonStyle())
+                    .controlSize(.large)
+                    .background(Color(red: 249/255, green: 124/255, blue:124/255))
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
+                    .listRowSeparator(.hidden)
                     .padding(.bottom, 20)
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Recipe Detail")
-            .padding()
         }
+        .padding(.horizontal, 50.0)
     }
     
     func formattedNumber(_ value: Double) -> String {
@@ -148,3 +157,7 @@ struct ImageDetailPage: View {
 }
 
 
+#Preview {
+    let imageModel = ImageModel(id: UUID(), imageURL: URL(string: "https://example.com/image.jpg")!, label: "Chicken breast", calories: 200, shareAs: "https://example.com/share", cuisineType: ["Italian", "Chinese"], mealType: ["Breakfast", "Dinner"], dietLabels: ["Low-Carbs", "Low-Fat"], healthLabels: ["Healthy", "Keto"], ingredients: ["Chicken", "Salt"], fat: 30, carbs: 100, protein: 100)
+        return ImageDetailPage(imageModel: imageModel, userId: "TestUser")
+}
