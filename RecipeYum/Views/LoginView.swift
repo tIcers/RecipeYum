@@ -13,9 +13,20 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack{
-                // Header
-                HeaderView(title: "Login", subtitle: "RecipeYum", login_image: Image("login_img"))
                 
+                // Header
+                Text("Log In")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.white)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                    .offset(CGSize(width: 0.0, height: -60.0))
+                    .background(
+                        Image("login")
+                            .resizable()
+                            .scaledToFill()
+                            .edgesIgnoringSafeArea(.all)
+                    )
                 // Login Form
                 
                 Form {
@@ -24,20 +35,36 @@ struct LoginView: View {
                             .foregroundColor(.red)
                     }
                     
-                    TextField("Email", text: $viewModel.email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    
-                    SecureField("Password", text: $viewModel.password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
-                    Button("Log in")
-                    {
-                        viewModel.login()
+                    Section() {
+                        TextField("Email", text: $viewModel.email)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .autocapitalization(.none)
+                            .autocorrectionDisabled()
+                            .padding(.vertical)
+                            .listRowSeparator(.hidden)
+
+                        
+                        SecureField("Password", text: $viewModel.password)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.bottom)
+                            .listRowSeparator(.hidden)
+                        
+                        Button()
+                        {
+                            viewModel.login()
+                        } label: {
+                            Text("Log In")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(BorderedButtonStyle())
+                        .controlSize(.large)
+                        .background(Color(.accent))
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
+                    
                 }
+                .padding(.top, -10.0) // Remove padding
                 
                 // Link to create an account
                 VStack {

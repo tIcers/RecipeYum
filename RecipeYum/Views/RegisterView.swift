@@ -17,9 +17,10 @@ struct RegisterView: View {
             Spacer()
             Text("Register")
                 .font(.largeTitle)
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
                 .foregroundColor(Color(#colorLiteral(red: 0.02745098039, green: 0.4235294118, blue: 0.6823529412, alpha: 1)))
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .offset(CGSize(width: 0.0, height: 50.0))
                 .background(
                             Image("register")
                                 .resizable()
@@ -50,8 +51,9 @@ struct RegisterView: View {
                         SecureField("Password", text: $viewModel.password)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.bottom)
+                            .listRowSeparator(.hidden)
                     }
-                    .padding()
+                    
                     
                         Button() {
                             viewModel.register()
@@ -61,9 +63,10 @@ struct RegisterView: View {
                         }
                         .buttonStyle(BorderedButtonStyle())
                         .controlSize(.large)
-                        .background(Color(#colorLiteral(red: 0.4666666667, green: 0.768627451, blue: 0.8705882353, alpha: 1)))
+                        .background(Color(.accent))
                         .cornerRadius(8)
                         .foregroundColor(.white)
+                        .listRowSeparator(.hidden)
                     
                     
                 }

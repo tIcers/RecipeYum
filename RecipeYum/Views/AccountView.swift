@@ -8,19 +8,6 @@
 import SwiftUI
 import FirebaseFirestoreSwift
 
-
-//extension UINavigationController {
-//    override open func viewDidLoad() {
-//        super.viewDidLoad()
-//        appearance.configureWithTransparentBackground()
-//        appearance.backgroundImage = UIImage(named: "burger")
-//        
-//        navigationBar.standardAppearance = appearance
-//        navigationBar.compactAppearance = appearance
-//        navigationBar.scrollEdgeAppearance = appearance
-//    }
-//}
-
 struct AccountView: View {
     @StateObject var viewModel = AccountViewViewModel()
     @State private var userName: String = ""
@@ -47,7 +34,7 @@ struct AccountView: View {
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity)
                 .background(
-                            Image("bg") // Replace with the name of your background image
+                            Image("account")
                                 .resizable()
                                 .scaledToFill()
                                 .edgesIgnoringSafeArea(.all)
@@ -66,12 +53,14 @@ struct AccountView: View {
                             .scaledToFill()
                             .frame(width: 150, height: 150)
                             .clipShape(Circle())
-                            .foregroundColor(.gray)
+                            .foregroundColor(.white)
                     }
 
                     Button("Select Profile Picture") {
                         isImagePickerPresented.toggle()
                     }
+                    .foregroundColor(.white)
+                    .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
                     .fileImporter(isPresented: $isImagePickerPresented, allowedContentTypes: [.image]) { result in
                         do {
                             let file = try result.get()
@@ -119,6 +108,7 @@ struct AccountView: View {
                         Text("Full Name:")
                         TextField("\(viewModel.user.name)", text: $userName)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .listRowSeparator(.hidden)
                             .autocorrectionDisabled()
                             .onChange(of: userName) {
                                 // Add your validation logic here
@@ -133,6 +123,8 @@ struct AccountView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .autocapitalization(.none)
                             .autocorrectionDisabled()
+                            .listRowSeparator(.hidden)
+                            .padding(.bottom, -20.0)
                             .onChange(of: userEmail) {
                                 // Add your validation logic here
                                 if userEmail.isEmpty {
@@ -168,9 +160,10 @@ struct AccountView: View {
                             }
                             .buttonStyle(BorderedButtonStyle())
                             .controlSize(.large)
-                            .background(Color.blue)
+                            .background(Color(.accent))
                             .cornerRadius(8)
                             .foregroundColor(.white)
+                            .listRowSeparator(.hidden)
                             
                             Spacer()
                             
@@ -179,11 +172,13 @@ struct AccountView: View {
                             }
                             .buttonStyle(BorderedButtonStyle())
                             .controlSize(.large)
-                            .background(Color.red)
+                            .background(Color(red: 253/255, green: 170/255, blue:170/255))
                             .cornerRadius(8)
                             .foregroundColor(.white)
+                            .listRowSeparator(.hidden)
                         }
                     }
+                    .listRowSeparator(.hidden)
                 }
                 
                 .padding()
@@ -197,6 +192,7 @@ struct AccountView: View {
             }
             .background(Color(.systemBackground))
             .edgesIgnoringSafeArea(.all)
+            .listRowSeparator(.hidden)
         }
 
     }
