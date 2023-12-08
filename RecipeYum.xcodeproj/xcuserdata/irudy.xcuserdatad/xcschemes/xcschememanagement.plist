@@ -28,7 +28,25 @@
 		<key>RecipeYum.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>90C946A12ACB452400B9A984</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>90C946B12ACB452800B9A984</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>90C946BB2ACB452800B9A984</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

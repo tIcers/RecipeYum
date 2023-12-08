@@ -13,8 +13,8 @@ class ImageListViewModel: ObservableObject {
     @Published var searchString: String = ""
 
     private var cancellables: Set<AnyCancellable> = []
-    private let appId = "f2f45e95"
-    private let appKey = "b72dc6cc95bcc5c2731e9880f4436877"
+    private let appId: String? = ProcessInfo.processInfo.environment["APP_ID"]
+    private let appKey: String? = ProcessInfo.processInfo.environment["API_KEY"]
     private let apiEndpoint = "https://api.edamam.com/api/recipes/v2"
     
     private var currentPage = 0
@@ -31,8 +31,8 @@ class ImageListViewModel: ObservableObject {
 
             let parameters: [String: String] = [
                 "q": searchString,
-                "app_id": appId,
-                "app_key": appKey,
+                "app_id": appId!,
+                "app_key": appKey!,
                 "type": "public",
                 "from": String(currentPage * pageSize),
                 "to": String((currentPage + 1) * pageSize)
@@ -85,8 +85,8 @@ class ImageListViewModel: ObservableObject {
     func fetchRecipes(for query: String) {
         let parameters: [String: String] = [
             "q": query,
-            "app_id": appId,
-            "app_key": appKey,
+            "app_id": appId!,
+            "app_key": appKey!,
             "type": "public",
         ]
 
