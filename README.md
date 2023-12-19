@@ -38,6 +38,12 @@ RecipeYum is an innovative iOS app crafted for culinary enthusiasts and home coo
 <div align="center">
 <table>
   <tr>
+  <img src="login.png" alt="Login" width="200"/>
+  <img src="Acc.png" alt="Account" width="200"/>
+  <img src="Recipe.png" alt="Recipe" width="200"/>
+  <img src="meal.png" alt="Meal" width="200"/>
+</p>
+
   </tr>
 </table>
 </div>
