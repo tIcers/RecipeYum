@@ -61,9 +61,6 @@
 		90C946A82ACB452400B9A984 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946A72ACB452400B9A984 /* ContentView.swift */; };
 		90C946AA2ACB452700B9A984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C946A92ACB452700B9A984 /* Assets.xcassets */; };
 		90C946AD2ACB452700B9A984 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C946AC2ACB452700B9A984 /* Preview Assets.xcassets */; };
-		90C946B72ACB452800B9A984 /* RecipeYumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946B62ACB452800B9A984 /* RecipeYumTests.swift */; };
-		90C946C12ACB452800B9A984 /* RecipeYumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946C02ACB452800B9A984 /* RecipeYumUITests.swift */; };
-		90C946C32ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C946C22ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,10 +110,7 @@
 		90C946A92ACB452700B9A984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90C946AC2ACB452700B9A984 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90C946B22ACB452800B9A984 /* RecipeYumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeYumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90C946B62ACB452800B9A984 /* RecipeYumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumTests.swift; sourceTree = "<group>"; };
 		90C946BC2ACB452800B9A984 /* RecipeYumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeYumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90C946C02ACB452800B9A984 /* RecipeYumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumUITests.swift; sourceTree = "<group>"; };
-		90C946C22ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeYumUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,8 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				90C946A42ACB452400B9A984 /* RecipeYum */,
-				90C946B52ACB452800B9A984 /* RecipeYumTests */,
-				90C946BF2ACB452800B9A984 /* RecipeYumUITests */,
 				90C946A32ACB452400B9A984 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -271,23 +263,6 @@
 				90C946AC2ACB452700B9A984 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		90C946B52ACB452800B9A984 /* RecipeYumTests */ = {
-			isa = PBXGroup;
-			children = (
-				90C946B62ACB452800B9A984 /* RecipeYumTests.swift */,
-			);
-			path = RecipeYumTests;
-			sourceTree = "<group>";
-		};
-		90C946BF2ACB452800B9A984 /* RecipeYumUITests */ = {
-			isa = PBXGroup;
-			children = (
-				90C946C02ACB452800B9A984 /* RecipeYumUITests.swift */,
-				90C946C22ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift */,
-			);
-			path = RecipeYumUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,7 +459,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C946B72ACB452800B9A984 /* RecipeYumTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,8 +466,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C946C32ACB452800B9A984 /* RecipeYumUITestsLaunchTests.swift in Sources */,
-				90C946C12ACB452800B9A984 /* RecipeYumUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RecipeYum/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MCXXUBUZW7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = RecipeYum;
@@ -669,7 +641,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RecipeYum/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MCXXUBUZW7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = RecipeYum;
